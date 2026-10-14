@@ -12,13 +12,13 @@
 
   <style>
     :root {
-      --tinta: #14213d;
-      --fondo: #f2f5f9;
-      --superficie: #ffffff;
-      --acento: #2f5bea;
-      --acento-suave: #e3eaff;
-      --mango: #ffb703;
-      --texto-suave: #4a5568;
+      --tinta: #071426;
+      --fondo: #081a30;
+      --superficie: #0e2542;
+      --acento: #2488ff;
+      --acento-suave: #102f54;
+      --mango: #76c7ff;
+      --texto-suave: #b5c8df;
     }
 
     html { scroll-behavior: smooth; }
@@ -31,6 +31,113 @@
     h1, h2, h3, h4 {
       font-family: "Bricolage Grotesque", system-ui, sans-serif;
       letter-spacing: -0.02em;
+    }
+
+    /* Estética azul cinematográfica inspirada en interfaces de acción gótica */
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(ellipse at 15% 8%, rgba(36, 136, 255, .16), transparent 34rem),
+        radial-gradient(ellipse at 88% 42%, rgba(63, 184, 255, .08), transparent 30rem),
+        var(--fondo);
+      color: #e6f1ff;
+    }
+    ::selection { background: #2488ff; color: #fff; }
+    .navbar {
+      background: rgba(5, 16, 31, .94);
+      border-bottom: 1px solid rgba(118, 199, 255, .22);
+      backdrop-filter: blur(12px);
+    }
+    .navbar-brand { color: #f3f8ff; }
+    .navbar .nav-link { color: #a9c7e8; transition: color .2s ease; }
+    .navbar .nav-link:hover, .navbar .nav-link:focus { color: #76c7ff; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(115deg, rgba(5, 16, 31, .98), rgba(8, 35, 66, .94) 58%, rgba(15, 65, 111, .86));
+      border-bottom: 1px solid rgba(118, 199, 255, .2);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 26rem;
+      height: 26rem;
+      right: -8rem;
+      top: -12rem;
+      border: 1px solid rgba(118, 199, 255, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2.5rem rgba(118, 199, 255, .025),
+                  0 0 0 5rem rgba(118, 199, 255, .02),
+                  0 0 90px rgba(36, 136, 255, .15);
+      pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero h1 { text-shadow: 0 0 28px rgba(36, 136, 255, .2); }
+    .frase {
+      color: #8bd4ff;
+      border-left: 3px solid #2488ff;
+      padding-left: .8rem;
+    }
+    .foto {
+      border-color: #76c7ff;
+      box-shadow: 0 0 0 10px rgba(36, 136, 255, .08), 0 0 45px rgba(36, 136, 255, .24);
+    }
+    .btn-warning {
+      --bs-btn-color: #06172b;
+      --bs-btn-bg: #76c7ff;
+      --bs-btn-border-color: #76c7ff;
+      --bs-btn-hover-color: #04101f;
+      --bs-btn-hover-bg: #a2dcff;
+      --bs-btn-hover-border-color: #a2dcff;
+      box-shadow: 0 0 24px rgba(36, 136, 255, .2);
+    }
+    .titulo-seccion { color: #f0f7ff; }
+    .subtitulo-seccion, .texto-presentacion { color: #c0d2e8; }
+    .video-card {
+      background: linear-gradient(155deg, #102b4b, #091b31);
+      color: #eaf4ff;
+      border-color: rgba(118, 199, 255, .2);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .16);
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .video-card:hover {
+      border-color: #2488ff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(36, 136, 255, .16);
+    }
+    .video-card .miniatura { background: #102f54; }
+    .video-card .play { background: rgba(3, 14, 28, .36); color: #a6deff; }
+    .video-card p { color: #b5c8df; }
+    .pasatiempos {
+      background: linear-gradient(135deg, rgba(16, 47, 84, .94), rgba(7, 26, 48, .98));
+      border-top: 1px solid rgba(118, 199, 255, .15);
+      border-bottom: 1px solid rgba(118, 199, 255, .15);
+    }
+    .hobby {
+      background: linear-gradient(145deg, #123052, #0b2039);
+      border-left-color: #2488ff;
+      border-top: 1px solid rgba(118, 199, 255, .18);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+    }
+    .hobby h3 { color: #edf7ff; }
+    .hobby p { color: #b5c8df; }
+    .hobby .emoji { filter: drop-shadow(0 0 9px rgba(118, 199, 255, .22)); }
+    footer {
+      background: #040d19;
+      border-top: 1px solid rgba(118, 199, 255, .2);
+    }
+    .social a { background: rgba(118, 199, 255, .1); }
+    .social a:hover { background: #176bd0; }
+    .modal-content {
+      color: #eaf4ff;
+      background: #0a1b30;
+      border: 1px solid rgba(118, 199, 255, .24);
+    }
+    .modal-header { border-bottom-color: rgba(118, 199, 255, .16); }
+    .btn-close { filter: invert(1) grayscale(1); }
+    @media (max-width: 767.98px) {
+      .hero { padding: 4rem 0 4.5rem; }
+      .foto { width: 190px; height: 190px; }
     }
 
     .navbar { background: var(--tinta); }
@@ -71,6 +178,17 @@
       font-weight: 800;
       font-size: clamp(1.8rem, 4vw, 2.5rem);
       margin-bottom: .5rem;
+      position: relative;
+      padding-bottom: .7rem;
+    }
+    .titulo-seccion::after {
+      content: "";
+      display: block;
+      width: 4.2rem;
+      height: 3px;
+      margin-top: .65rem;
+      background: linear-gradient(90deg, #2488ff, transparent);
+      border-radius: 99px;
     }
     .subtitulo-seccion {
       color: var(--texto-suave);
@@ -316,3 +434,4 @@
   </script>
 </body>
 </html>
+
