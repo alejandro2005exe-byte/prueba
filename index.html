@@ -385,6 +385,30 @@
     }
 }
 
+
+    /* Refuerzo visual para la sección Mi perfil */
+    #perfil.perfil-section {
+      display: block;
+      width: 100%;
+      color: #eaf6ff;
+      background:
+        radial-gradient(ellipse at top right, rgba(0, 174, 255, .12), transparent 45%),
+        linear-gradient(180deg, #07111f, #03070d);
+    }
+    #perfil .perfil-card {
+      color: #eaf6ff;
+      background: linear-gradient(145deg, #102238, #081321);
+      border: 1px solid #1d4664;
+      border-radius: 12px;
+    }
+    #perfil .perfil-card h3 { color: #58d9ff; }
+    #perfil .perfil-card p { color: #c5d6e4; }
+    #perfil .perfil-card strong { color: #fff; }
+    #perfil .perfil-titulo { color: #f0f7ff; }
+    #perfil .perfil-titulo span { color: #00c8ff; }
+    #perfil .perfil-etiqueta { color: #00c8ff; }
+    #perfil .perfil-descripcion { color: #a8bfd1; }
+
   </style>
 </head>
 <body>
@@ -402,7 +426,7 @@
           <li class="nav-item"><a class="nav-link" href="#musica">Mi música</a></li>
           <li class="nav-item"><a class="nav-link" href="#pasatiempos">Pasatiempos</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li><a href="#perfil">Mi perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#perfil">Mi perfil</a></li>
         </ul>
       </div>
     </div>
@@ -479,10 +503,9 @@
         </div>
       </div>
     </section>
-  </main>
 
-  
-<!-- PERFIL PERSONAL -->
+
+  <!-- PERFIL PERSONAL -->
 <section id="perfil" class="perfil-section">
     <div class="perfil-container">
 
@@ -534,7 +557,7 @@
         </div>
     </div>
 </section>
-
+  </main>
 
   <footer id="contacto">
     <div class="container text-center">
@@ -610,4 +633,3 @@
   </script>
 </body>
 </html>
-
