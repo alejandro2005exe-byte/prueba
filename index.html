@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Presentación personal</title>
+  <title>Presentación personal | Alejandro Fabian Pacheco Calderón</title>
 
   <!-- Bootstrap 5 + Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,81 +20,142 @@
       --mango: #ffb703;
       --texto-suave: #4a5568;
     }
+
+    html { scroll-behavior: smooth; }
     body {
       font-family: "Source Sans 3", system-ui, sans-serif;
       background: var(--fondo);
       color: var(--tinta);
       line-height: 1.65;
     }
-    h1, h2, h3, h4 { font-family: "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.02em; }
+    h1, h2, h3, h4 {
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      letter-spacing: -0.02em;
+    }
 
-    /* Navegación */
     .navbar { background: var(--tinta); }
     .navbar .nav-link { color: #cfd8ee; }
     .navbar .nav-link:hover, .navbar .nav-link:focus { color: #fff; }
-    .navbar-brand { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; color: #fff; }
-
-    /* Hero */
-    .hero { background: var(--tinta); color: #fff; padding: 5rem 0 6rem; }
-    .hero h1 { font-size: clamp(2.6rem, 7vw, 4.8rem); font-weight: 800; line-height: 1.02; }
-    .hero .lead { color: #cfd8ee; max-width: 38rem; }
-    .foto {
-      width: 220px; height: 220px; object-fit: cover; border-radius: 50%;
-      border: 6px solid var(--mango); background: var(--acento-suave);
+    .navbar-brand {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 700;
+      color: #fff;
     }
 
-    /* Secciones */
+    .hero { background: var(--tinta); color: #fff; padding: 5rem 0 6rem; }
+    .hero h1 {
+      font-size: clamp(2.25rem, 6vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      overflow-wrap: anywhere;
+    }
+    .hero .lead { color: #cfd8ee; max-width: 38rem; }
+    .frase {
+      display: inline-block;
+      color: var(--mango);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .foto {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--mango);
+      background: var(--acento-suave);
+    }
+
     section.bloque { padding: 4.5rem 0; }
-    .titulo-seccion { font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: .5rem; }
-    .subtitulo-seccion { color: var(--texto-suave); max-width: 40rem; margin-bottom: 2.5rem; }
+    .titulo-seccion {
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: .5rem;
+    }
+    .subtitulo-seccion {
+      color: var(--texto-suave);
+      max-width: 40rem;
+      margin-bottom: 2.5rem;
+    }
     .texto-presentacion { font-size: 1.15rem; max-width: 46rem; }
 
-    /* Videos */
     .video-card {
-      background: var(--superficie); border: 1px solid #dbe2ee; border-radius: .75rem;
-      overflow: hidden; height: 100%; cursor: pointer; text-align: left; padding: 0; width: 100%;
+      background: var(--superficie);
+      border: 1px solid #dbe2ee;
+      border-radius: .75rem;
+      overflow: hidden;
+      height: 100%;
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+      width: 100%;
+      color: var(--tinta);
     }
-    .video-card:hover { border-color: var(--acento); }
+    .video-card:hover { border-color: var(--acento); transform: translateY(-2px); }
     .video-card:focus-visible, .btn:focus-visible, .social a:focus-visible {
-      outline: 3px solid var(--mango); outline-offset: 2px;
+      outline: 3px solid var(--mango);
+      outline-offset: 2px;
     }
-    .video-card .miniatura { position: relative; aspect-ratio: 16 / 9; background: var(--acento-suave); }
+    .video-card .miniatura {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--acento-suave);
+    }
     .video-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .video-card .play {
-      position: absolute; inset: 0; display: grid; place-items: center;
-      color: #fff; font-size: 3rem; background: rgba(20, 33, 61, .25);
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 3rem;
+      background: rgba(20, 33, 61, .25);
     }
     .video-card .info { padding: 1rem 1.1rem 1.2rem; }
     .video-card h3 { font-size: 1.1rem; margin: 0 0 .15rem; }
     .video-card p { margin: 0; color: var(--texto-suave); font-size: .95rem; }
 
-    /* Pasatiempos */
     .pasatiempos { background: var(--acento-suave); }
-    .hobby { background: var(--superficie); border-radius: .75rem; padding: 1.5rem; height: 100%; border-left: 6px solid var(--acento); }
+    .hobby {
+      background: var(--superficie);
+      border-radius: .75rem;
+      padding: 1.5rem;
+      height: 100%;
+      border-left: 6px solid var(--acento);
+    }
     .hobby .emoji { font-size: 2rem; line-height: 1; }
     .hobby h3 { font-size: 1.25rem; margin: .75rem 0 .35rem; }
     .hobby p { margin: 0; color: var(--texto-suave); }
 
-    /* Footer */
     footer { background: var(--tinta); color: #cfd8ee; padding: 3rem 0 2rem; }
     footer h2 { color: #fff; font-size: 1.5rem; }
     .social a {
-      display: inline-grid; place-items: center; width: 2.9rem; height: 2.9rem;
-      border-radius: 50%; background: rgba(255, 255, 255, .1); color: #fff; font-size: 1.25rem;
-      margin: 0 .3rem; text-decoration: none; transition: background .15s;
+      display: inline-grid;
+      place-items: center;
+      width: 2.9rem;
+      height: 2.9rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      font-size: 1.25rem;
+      margin: 0 .3rem;
+      text-decoration: none;
+      transition: background .15s;
     }
     .social a:hover { background: var(--acento); }
 
-    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
   </style>
 </head>
 <body>
-
   <!-- Navegación -->
   <nav class="navbar navbar-expand-md navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#inicio">Mi presentación</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
@@ -108,71 +169,72 @@
     </div>
   </nav>
 
-  <!-- Hero: EDITA tu nombre, frase y foto -->
+  <!-- Presentación principal -->
   <header class="hero" id="inicio">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-md-7">
-          <h1>Hola, soy Tu Nombre</h1>
-          <p class="lead mt-3">Escribe aquí una frase corta que te describa. Por ejemplo: tu profesión, tu ciudad o lo que te apasiona.</p>
-          <a href="#musica" class="btn btn-warning btn-lg mt-3 fw-semibold">Ver mi música</a>
+          <span class="frase">Bury the Light</span>
+          <h1 class="mt-3">Hola, soy Alejandro Fabian Pacheco Calderón</h1>
+          <p class="lead mt-3">Soy un estudiante de ingeniería. Esta es mi página personal, donde comparto un poco sobre mí, la música que me gusta y mis pasatiempos.</p>
+          <a href="#musica" class="btn btn-warning btn-lg mt-3 fw-semibold">Escuchar mi música</a>
         </div>
         <div class="col-md-5 text-center">
-          <!-- Cambia el src por la ruta de tu foto, por ejemplo: foto.jpg -->
-          <img class="foto" src="https://via.placeholder.com/440x440/e3eaff/14213d?text=Tu+foto" alt="Foto de perfil">
+          <!-- Sube tu fotografía al repositorio con el nombre foto.jpg.
+               Si tu archivo tiene otro nombre, cambia el src de abajo. -->
+          <img class="foto" src="foto.jpg" alt="Fotografía de Alejandro Fabian Pacheco Calderón">
+          <p class="text-light mt-3 mb-0">Alejandro Fabian Pacheco Calderón</p>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Sobre mí: EDITA el texto de presentación -->
     <section class="bloque" id="sobre-mi">
       <div class="container">
         <h2 class="titulo-seccion">Sobre mí</h2>
+        <p class="subtitulo-seccion">Un poco sobre quién soy.</p>
         <p class="texto-presentacion">
-          Aquí va tu texto de presentación. Cuéntanos quién eres, a qué te dedicas, qué estudias o dónde trabajas.
+          Soy Alejandro Fabian Pacheco Calderón, estudiante de ingeniería. Me interesa aprender cosas nuevas y disfrutar de mi tiempo libre con los videojuegos, la música y la lectura.
         </p>
         <p class="texto-presentacion">
-          Puedes agregar otro párrafo para hablar de tus metas, tus valores o lo que te gustaría aprender.
+          Mi frase personal es “Bury the Light”, una frase que elegí para representar esta presentación.
         </p>
       </div>
     </section>
 
-    <!-- Música: los videos se editan en la lista "videos" del script al final -->
     <section class="bloque pt-0" id="musica">
       <div class="container">
-        <h2 class="titulo-seccion">Mis videos musicales favoritos</h2>
-        <p class="subtitulo-seccion">Haz clic en un video para reproducirlo aquí mismo.</p>
+        <h2 class="titulo-seccion">Mi música favorita</h2>
+        <p class="subtitulo-seccion">Pulsa una tarjeta para reproducir el video aquí mismo.</p>
         <div class="row g-4" id="lista-videos"></div>
       </div>
     </section>
 
-    <!-- Pasatiempos: EDITA cada tarjeta -->
     <section class="bloque pasatiempos" id="pasatiempos">
       <div class="container">
         <h2 class="titulo-seccion">Mis pasatiempos</h2>
-        <p class="subtitulo-seccion">Lo que hago cuando no estoy trabajando o estudiando.</p>
+        <p class="subtitulo-seccion">Las cosas que disfruto hacer en mi tiempo libre.</p>
         <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <div class="hobby">
+              <div class="emoji" aria-hidden="true">🎮</div>
+              <h3>Videojuegos</h3>
+              <p>Me gusta jugar videojuegos y disfrutar de sus historias, desafíos y mundos.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="hobby">
+              <div class="emoji" aria-hidden="true">🎧</div>
+              <h3>Escuchar música</h3>
+              <p>La música forma parte de mi día y me gusta descubrir canciones que disfruto.</p>
+            </div>
+          </div>
           <div class="col-sm-6 col-lg-4">
             <div class="hobby">
               <div class="emoji" aria-hidden="true">📚</div>
               <h3>Leer</h3>
-              <p>Describe qué tipo de libros te gustan y qué estás leyendo ahora.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <div class="hobby">
-              <div class="emoji" aria-hidden="true">⚽</div>
-              <h3>Deporte</h3>
-              <p>Cuenta qué deporte practicas y con qué frecuencia.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <div class="hobby">
-              <div class="emoji" aria-hidden="true">🎸</div>
-              <h3>Tocar música</h3>
-              <p>Habla de tus instrumentos o de la música que escuchas.</p>
+              <p>Disfruto leer y conocer nuevas ideas e historias a través de los libros.</p>
             </div>
           </div>
         </div>
@@ -180,19 +242,14 @@
     </section>
   </main>
 
-  <!-- Footer: EDITA los enlaces de tus redes -->
   <footer id="contacto">
     <div class="container text-center">
       <h2>Encuéntrame en redes</h2>
+      <p class="mb-3">Agrega tus propios enlaces si quieres compartir tus redes sociales.</p>
       <div class="social my-4">
-        <a href="https://www.facebook.com/tu-usuario" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/tu-usuario" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
-        <a href="https://www.youtube.com/@tu-canal" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-        <a href="mailto:tucorreo@ejemplo.com" aria-label="Correo electrónico"><i class="bi bi-envelope-fill"></i></a>
+        <a href="https://github.com/alejandro2005exe-byte" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
       </div>
-      <small>&copy; <span id="anio"></span> Tu Nombre. Todos los derechos reservados.</small>
+      <small>&copy; <span id="anio"></span> Alejandro Fabian Pacheco Calderón. Todos los derechos reservados.</small>
     </div>
   </footer>
 
@@ -201,12 +258,13 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title fs-5" id="modalTitulo">Video</h3>
+          <h3 class="modal-title fs-5" id="modalTitulo">Video musical</h3>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body p-0">
           <div class="ratio ratio-16x9">
-            <iframe id="reproductor" src="" title="Reproductor de video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="reproductor" src="" title="Reproductor de video"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -215,14 +273,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    /* ===== EDITA AQUÍ TUS VIDEOS FAVORITOS =====
-       "id" es el código que aparece después de "v=" en el enlace de YouTube.
-       Ejemplo: https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  id: "dQw4w9WgXcQ"
-       Agrega o quita líneas según necesites. */
+    // Tus canciones. Puedes cambiar los títulos cuando quieras.
     const videos = [
-      { titulo: "Nombre de la canción 1", artista: "Artista 1", id: "dQw4w9WgXcQ" },
-      { titulo: "Nombre de la canción 2", artista: "Artista 2", id: "dQw4w9WgXcQ" },
-      { titulo: "Nombre de la canción 3", artista: "Artista 3", id: "dQw4w9WgXcQ" }
+      { titulo: "Mi canción favorita 1", artista: "Escuchar en YouTube", id: "pvy9km7g6fw" },
+      { titulo: "Mi canción favorita 2", artista: "Escuchar en YouTube", id: "fb_S4aWI6Og" },
+      { titulo: "Mi canción favorita 3", artista: "Escuchar en YouTube", id: "RLDoLQQ4uP4" }
     ];
 
     const lista = document.getElementById("lista-videos");
@@ -231,13 +286,15 @@
     const modalTitulo = document.getElementById("modalTitulo");
     const modal = new bootstrap.Modal(modalEl);
 
-    videos.forEach(v => {
+    videos.forEach((v, indice) => {
       const col = document.createElement("div");
       col.className = "col-md-6 col-lg-4";
       col.innerHTML = `
-        <button class="video-card" type="button" aria-label="Reproducir ${v.titulo} de ${v.artista}">
+        <button class="video-card" type="button" aria-label="Reproducir ${v.titulo}">
           <div class="miniatura">
-            <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="" loading="lazy">
+            <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg"
+                 alt="Miniatura de ${v.titulo}" loading="lazy"
+                 onerror="this.style.display='none'">
             <span class="play" aria-hidden="true"><i class="bi bi-play-circle-fill"></i></span>
           </div>
           <div class="info">
@@ -247,15 +304,14 @@
         </button>`;
       col.querySelector("button").addEventListener("click", () => {
         modalTitulo.textContent = `${v.titulo} · ${v.artista}`;
-        reproductor.src = `https://www.youtube.com/embed/${v.id}?autoplay=1`;
+        reproductor.src = `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1`;
         modal.show();
       });
       lista.appendChild(col);
     });
 
-    // Detiene el video al cerrar la ventana
+    // Detiene el video al cerrar la ventana.
     modalEl.addEventListener("hidden.bs.modal", () => { reproductor.src = ""; });
-
     document.getElementById("anio").textContent = new Date().getFullYear();
   </script>
 </body>
